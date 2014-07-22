@@ -16,4 +16,17 @@ class MyVector < Vector
     length
   end
 
+  def <<(i)
+    MyVector.elements(self.to_a << i)
+  end
+
+  def angle_to(v)
+    x = ((self[0]*self[1])+(v[0]*v[1]))/(Math.sqrt(self[1]**2+v[1]**2)*Math.sqrt(self[0]**2+v[0]**2))
+    Math.acos(x)
+  end
+
+  def self.angle_to(v1, v2)
+    x = v1.angle_to(v2)
+  end
+
 end
