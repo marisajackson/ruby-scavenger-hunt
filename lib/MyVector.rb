@@ -11,10 +11,7 @@ class MyVector < Vector
     0.upto(v.length - 2) do |i|
       v1 = v[i]
       v2 = v[i + 1]
-      distance = Math.sqrt((v1[0] - v2[0])**2 + (v1[1] - v2[1])**2)
-      puts distance
-      length += distance
-      puts length
+      length += Math.sqrt((v1[0] - v2[0])**2 + (v1[1] - v2[1])**2)
     end
     length
   end
